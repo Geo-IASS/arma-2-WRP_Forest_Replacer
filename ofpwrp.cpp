@@ -269,12 +269,13 @@ bool OFPWRP::Find_Match(int i)
 	}
 
 	// OK
+	// this is not an 50m block, maybe 5m would be too large definition for it!
 	if (strcmp (objects.at(i).path,"vte_objects\\vte_grasspatch.p3d") == 0)
 	{
 //		DoMyChanges = true;
 //		ForestsNum++;
 //		Clear_TreeType_Array();
-		NumOfRandomObjects = 15;
+		NumOfRandomObjects = 1; // was 15
 		strcpy (TreeType[0],"vte_objects\\vte_grass03.p3d");
 		strcpy (TreeType[1],"vte_objects\\vte_grass03.p3d");
 		strcpy (TreeType[2],"vte_objects\\vte_grass03.p3d");
@@ -409,12 +410,13 @@ bool OFPWRP::Find_Match(int i)
 	}
 
 	// OK
+	// this is not an 50m block, maybe 5m would be too large definition for it!
 	if (strcmp (objects.at(i).path,"vte_objects\\vte_igrasspatch.p3d") == 0)
 	{
 //		DoMyChanges = true;
 //		ForestsNum++;
 //		Clear_TreeType_Array();
-		NumOfRandomObjects = 15;
+		NumOfRandomObjects = 1; // was 15
 		strcpy (TreeType[0],"vte_objects\\vte_grass05.p3d");
 		strcpy (TreeType[1],"vte_objects\\vte_grass05.p3d");
 		strcpy (TreeType[2],"vte_objects\\vte_grass05.p3d");
@@ -1135,6 +1137,7 @@ void OFPWRP::Replace_Object(int i)
 	tmp_x = objects.at(i).x;
 	float tmp_z = 0;
 	tmp_z = objects.at(i).z;
+	// not used hmm?
 	unsigned int tmp_index = 0;
 	tmp_index = objects.at(i).index;
 
